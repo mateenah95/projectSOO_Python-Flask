@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block stylesheet %}
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+  <!-- header -->
+  <div class="jumbotron" style="background-color: #cacaca">
+    <h1 class="" style="color: #326bdb; font-weight: bold">Special Olympics is Changing the World!</h1>
+    <p class="lead" style="color: #326bdb; font-weight: bold">Every day, in 169 countries, our sports bring people
+      together, creating a healthier, more welcoming world for all.</p>
+    <a class="btn btn-primary btn-lg" href="https://www1.specialolympicsontario.com/" role="button">Learn more</a>
+  </div>
+
+  <!-- image -->
+  <div class="card mb-4">
+    <div class="card body" style="width:100%">
+      <img class="slide" src="{{ url_for('static', filename='img/index-slide-1.jpg') }}" style="width:100%">
+      <img class="slide" src="{{ url_for('static', filename='img/index-slide-2.jpg') }}" style="width:100%">
+      <img class="slide" src="{{ url_for('static', filename='img/index-slide-3.jpg') }}" style="width:100%">
+
+      <script>
+        var myIndex = 0;
+        slide();
+      </script>
+    </div>
+  </div>
+
+{% endblock %}

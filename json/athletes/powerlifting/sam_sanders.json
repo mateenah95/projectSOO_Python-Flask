@@ -1,0 +1,51 @@
+{
+	"id": "102514",
+	"name": ["Sam", "", "Sanders"],
+	"gender": "M",
+	"DOB": "1997-11-24",
+	"province": "Ontario",
+	"language": "English",
+	"sport": "Power Lifting",
+	"competitions": {
+					"Competition 1": {"date": "2017-06-01", "rank": 1},
+					"Competition 2": {"date": "2017-06-10", "rank": 2},
+					"Competition 3": {"date": "2017-07-01", "rank": 3},
+					"Competition 4": {"date": "2017-07-10", "rank": 4},
+					"Competition 5": {"date": "2017-08-01", "rank": 5},
+					"Competition 6": {"date": "2017-08-10", "rank": 6}
+					},
+	"results": {
+		"bench press":
+			{
+			"Competition 1": {"score": 99.8, "average": 104.3},
+			"Competition 2": {"score": 104.3, "average": 94.4},
+			"Competition 3": {"score": 109.4, "average": 98.2},
+			"Competition 4": {"score": 104.2, "average": 67.0},
+			"Competition 5": {"score": 100.5, "average": 103.5},
+			"Competition 6": {"score": 104.8, "average": 106.5}
+			},
+		"deadlift":
+			{
+			"Competition 1": {"score": 74.5, "average": 88.2},
+			"Competition 2": {"score": 88.0, "average": 66.7},
+			"Competition 3": {"score": 72.0, "average": 61.3},
+			"Competition 4": {"score": 70.6, "average": 78.1},
+			"Competition 5": {"score": 82.2, "average": 67.3},
+			"Competition 6": {"score": 85.3, "average": 62.1}
+			},
+		"squat":
+			{
+			"Competition 1": {"score": 100.1, "average": 100.0},
+			"Competition 2": {"score": 109.0, "average": 82.2},
+			"Competition 3": {"score": 100.8, "average": 105.5}, 
+			"Competition 4": {"score": 106.3, "average": 67.5},
+			"Competition 5": {"score": 95.8, "average": 98.4},
+			"Competition 6": {"score": 98.6, "average": 71.6}
+			}
+		},
+	"personal best": {
+		"bench press": {"division": "M2", "record": 109.4, "division average": 98.2},
+		"deadlift": {"division" : "M2" , "record": 88.0, "division average": 66.7},
+		"squat": {"division": "M2", "record": 109.0, "division average": 82.2}
+		}
+}

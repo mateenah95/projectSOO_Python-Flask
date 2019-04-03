@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block stylesheet %}
+  <link href="{{ url_for('static', filename='css/sports_main.css') }}" rel="stylesheet" type="text/css">
+
+{% endblock %}
+{% block content %}
+<!-- begin page content -->
+<!-- all images were sourced from https://www.specialolympics.org/our-work/sports -->
+<div class='container-fluid sports-content-wrapper'>
+  <div><h1 class='display-4'>Sports</h1></div>
+  <!-- start sports row -->
+  <div class='row sport-container' id='summer'>
+    <h2>Summer</h2>
+    <div class='col-md-12 sport-header'></div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="{{ url_for('sports', sport='swimming') }}">
+        <img class="sport-logo logo-summer" src="{{ url_for('static', filename='img/swimming-soo.png') }}">
+      </a>
+      <h4> Swimming </h4>
+    </div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="{{ url_for('sports', sport='soccer')}}">
+        <img class="sport-logo logo-summer" src="{{ url_for('static', filename='img/soccer-soo.png') }}">
+      </a>
+      <h4> Soccer </h4>
+    </div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="#">
+        <img class="sport-logo logo-summer" src="{{ url_for('static', filename='img/golf-soo.png') }}">
+      </a>
+      <h4> Golf </h4>
+    </div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="{{ url_for('sports', sport='powerlifting')}}">
+        <img class="sport-logo logo-summer" src="{{ url_for('static', filename='img/powerlifting-soo.png') }}">
+      </a>
+      <h4> Powerlifting </h4>
+    </div>
+  </div> <!-- end of row -->
+
+  <!-- start sports row -->
+  <div class='row sport-container' id='winter'>
+    <h2>Winter</h2>
+    <div class='col-md-12 sport-header'></div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="#">
+        <img class="sport-logo logo-winter" src="{{ url_for('static', filename='img/alpine-ski-soo.png') }}">
+      </a>
+      <h4> Alpine Skiing </h4>
+    </div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="#">
+        <img class="sport-logo logo-winter" src="{{ url_for('static', filename='img/cross-country-soo.png') }}">
+      </a>
+      <h4> Cross Country Skiing </h4>
+    </div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="#">
+        <img class="sport-logo logo-winter" src="{{ url_for('static', filename='img/skating-soo.png') }}">
+      </a>
+      <h4> Skating </h4>
+    </div>
+    <div class='col-md-3 sport-card-container'>
+      <a href="#">
+        <img class="sport-logo logo-winter" src="{{ url_for('static', filename='img/snowshoe-soo.png') }}">
+      </a>
+      <h4> Snowshoeing </h4>
+    </div>
+  </div> <!-- end of row -->
+</div> <!-- end page content -->
+{% endblock %}

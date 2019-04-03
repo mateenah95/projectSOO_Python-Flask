@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+  <!--Main Stylesheet Link-->
+  <link href="{{ url_for('static', filename='css/player.css') }}" rel="stylesheet" type="text/css">
+  <!--Main Stylesheet & Javascript Links-->
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css" />
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+  <style>
+    th{
+      background: #326bdb;
+      font-weight: bold;
+      font-size: 2em;
+      color: white;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<!--Image and Medals Row-->
+<div class="container-fluid">
+  <div style="text-align: center;"><h1 class='display-4'><em>{{ team_name }}</em></h1></div>
+  <!--INFO ROW-->
+  <div class="row">
+    <div class="col-md-5 player-header">
+      <div id="profile-img-container">
+        <img class="img-fluid rounded-circle img-thumbnail" id="profile-img" src="{{ url_for('static', filename='img/person-placeholder.jpg') }}">
+      </div></div>
+
+    <div class="col-md-7 player-awards ">
+      <div class="medals-container">
+        <div class="coin gold"><p>0</p></div>
+        <div class="coin silver"><p>1</p></div>
+        <div class="coin bronze"><p>2</p></div>
+      </div></div>
+  </div>
+
+  <div class="col-md-12 ">
+    <div class="card shadow mb-4 bg-secondary">
+      <div class="card-body row">
+        <!--Column 1-->
+        <div class="col-md-4 aligner text-white">
+          <h2>Sport</h2>
+          <h3>{{ team_sport }}</h3>
+        </div>
+        <!--Column 2-->
+        <div class="col-md-4 aligner text-white">
+          <h2>Province</h2>
+          <h3>{{ province }}</h3>
+        </div>
+        <!--Column 3-->
+        <div class="col-md-4 aligner text-white">
+          <h2>Coach</h2>
+          <h3>John Doe</h3>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <!--SUMMARY STATISCTICS-->
+  <div class="container">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Accordion -->
+      <a href="#winLossTiedCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="winLossTiedCard">
+        <h6 class="m-0 font-weight-bold text-primary">Summary Statistics</h6>
+      </a>
+
+      <div class="collapse show col-md-12" id="winLossTiedCard" style="padding: 0px;">
+        <div class="card-body col-md-12 aligner" style="color: white; background: #326bdb; padding: 0px;">
+          <!--Column 1-->
+            <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+            <h2>Games</h2>
+            <h3><em>{{ games }}</em></h3>
+          </div>
+          <!--Column 2-->
+          <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+            <h2>Runs</h2>
+            <h3><em>{{ runs }}</em></h3>
+          </div>
+          <!--Column 3-->
+          <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+            <h2>Hits</h2>
+            <h3><em>{{ hits }}</em></h3>
+          </div>
+          <!--Column 4-->
+          <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+            <h2>At Bat</h2>
+            <h3><em>{{ atBat }}</em></h3>
+          </div>
+          <!--Column 5-->
+          <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+            <h2>HRs</h2>
+            <h3><em>{{ hr }}</em></h3>
+          </div>
+          <!--Column 6-->
+          <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16.66%;">
+            <h2>Streaks</h2>
+            <h3><em>{{ streak }}</em></h3>
+          </div>
+        </div>
+      </div></div>
+  </div>
+
+  <!--PASSES/ROSTER/CROSSES STATISTICS-->
+  <div class="container">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Accordion -->
+      <a href="#rosterCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="rosterCard">
+        <h6 class="m-0 font-weight-bold text-primary">Roster</h6>
+      </a>
+
+      <div class="collapse show col-md-12" id="rosterCard">
+        <div class="card-body row" style="padding: 0px;">
+          <!--SUMMARY COLUMN-->
+          <div class="col-md-3 aligner" style="background: #326bdb; color: white;">
+            <hr>
+            <h2>Home</h2>
+            <h1 style="font-weight: bold; font-size: 4em;">{{ home }}</h1>
+            <hr>
+            <h2>Away</h2>
+            <h1 style="font-weight: bold; font-size: 4em;">{{ away }}</h1>
+            <hr>
+            <h2>Neutral</h2>
+            <h1 style="font-weight: bold; font-size: 4em;">{{ neutral }}</h1>
+            <hr>
+          </div>
+          <!--ROSTER COLUMN-->
+          <div class="col-md-6 aligner">
+            <h1 style="font-weight: bold; font-size: 3em; color: #326bdb; margin-top: 10px;">Team Roster</h1>
+            <hr>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <tbody>
+                <tr>
+                    <th>#</th>
+                    <th>Full Name </th>
+                    <th>Position</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>{{ name1 }}</td>
+                  <td>{{ position1 }}</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>{{ name2 }}</td>
+                  <td>{{ position2 }}</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>{{ name3 }}</td>
+                  <td>{{ position3 }}</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>{{ name4 }}</td>
+                  <td>{{ position4 }}</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>{{ name5 }}</td>
+                  <td>{{ position5 }}</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>{{ name6 }}</td>
+                  <td>{{ position6 }}</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>{{ name7 }}</td>
+                  <td>{{ position7 }}</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>{{ name8 }}</td>
+                  <td>{{ position8 }}</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>{{ name9 }}</td>
+                  <td>{{ position9 }}</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>{{ name10 }}</td>
+                  <td>{{ position10 }}</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>{{ name11 }}</td>
+                  <td>{{ position11 }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--SUMMARY COLUMN-->
+          <div class="col-md-3 aligner" style="background: #326bdb; color: white;">
+                <hr>
+                <h2>Singles</h2>
+                <h1 style="font-weight: bold; font-size: 4em;">{{ singles }}</h1>
+                <hr>
+                <h2>Doubles</h2>
+                <h1 style="font-weight: bold; font-size: 4em;">{{ doubles }}</h1>
+                <hr>
+                <h2>Triples</h2>
+                <h1 style="font-weight: bold; font-size: 4em;">{{ triples }}</h1>
+                <hr>
+          </div>
+        </div>
+      </div></div>
+  </div>
+
+  <!--OTHER STATISTICS-->
+  <div class="container">
+        <div class="card shadow mb-4">
+          <!-- Card Header - Accordion -->
+          <a href="#winLossTiedCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="winLossTiedCard">
+            <h6 class="m-0 font-weight-bold text-primary">Summary Statistics</h6>
+          </a>
+
+          <div class="collapse show col-md-12" id="winLossTiedCard" style="padding: 0px;">
+            <div class="card-body col-md-12 aligner" style="color: white; background: #326bdb; padding: 0px;">
+              <!--Column 1-->
+                <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+                <h2>ON BASE</h2>
+                <h3><em>{{ onBase }}</em></h3>
+              </div>
+              <!--Column 2-->
+              <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+                <h2>BAT AVG</h2>
+                <h3><em>{{ batAvg }}</em></h3>
+              </div>
+              <!--Column 3-->
+              <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+                <h2>WALKS</h2>
+                <h3><em>{{ walks }}</em></h3>
+              </div>
+              <!--Column 4-->
+              <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+                <h2>STRIKEOUT</h2>
+                <h3><em>{{ strikeOut }}</em></h3>
+              </div>
+              <!--Column 5-->
+              <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+                <h2>SHUTOUT</h2>
+                <h3><em>{{ shutOut }}</em></h3>
+              </div>
+              <!--Column 6-->
+              <div class="aligner" style="display: inline-block; margin: 0px; padding: 0px; width: 16%;">
+                <h2>BASES</h2>
+                <h3><em>{{ bases }}</em></h3>
+              </div>
+            </div>
+          </div></div>
+      </div>
+
+</div>
+{% endblock %}

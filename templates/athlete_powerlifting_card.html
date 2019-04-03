@@ -1,0 +1,117 @@
+{% block sport_specific_stylesheet %}
+    <link href="{{ url_for('static', filename='css/player-powerlifting.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+<div class="card-body">
+  <div class="card shadow mb-4"> <!-- start of sports block content -->
+    <div class="card-header py-3 sport-heading bg-primary">
+          <h3 class="m-0 font-weight-bold text-white">{{ sport }}</h3>
+      </div>
+    <div class="card-body row"> <!-- start of sports block body -->
+        <div class="sports-block-left stats-box col-md-6">
+          <div class="highlights-box col-md-12 ">
+            <h4 class>Bench Press</h4>
+            Division: {{ bench_press_division }} <br>
+            Personal Record: {{ bench_press_record }} kg
+          </div>
+          <div class="highlights-box col-md-12 ">
+            <h4 class>Squat</h4>
+            Division: {{ squat_division }} <br>
+            Personal Record: {{ squat_record }} kg
+          </div>
+          <div class="highlights-box col-md-12 ">
+            <h4 class>Deadlift</h4>
+            Division: {{ deadlift_division }} <br>
+            Personal Record: {{ deadlift_record }} kg
+          </div>
+        </div> <!-- end of stats box -->
+        <!--start of graph-->
+
+        <div class="col-md-6 right-side">
+        <div class="col-md-12">
+              <div class="card-body">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <!-- <h6 class="m-0 font-weight-bold text-primary">Progress Graph</h6> -->
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#bench-press" role="tab" aria-controls="home" aria-selected="true">Bench Press</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#squat" role="tab" aria-controls="profile" aria-selected="false">Squat</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#deadlift" role="tab" aria-controls="contact" aria-selected="false">Deadlift</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active bg-white" id="bench-press" role="tabpanel" aria-labelledby="home-tab">
+                          <div class="card-body graph-container">
+                              {{  div1 | safe  }}
+                              {{  script1 | safe  }}
+                          </div>
+                        </div>
+                        <div class="tab-pane fade bg-white" id="squat" role="tabpanel" aria-labelledby="profile-tab">
+                          <div class="card-body graph-container">
+                              {{  div2 | safe  }}
+                              {{  script2 | safe  }}
+                          </div>
+                        </div>
+                        <div class="tab-pane fade bg-white" id="deadlift" role="tabpanel" aria-labelledby="contact-tab">
+                          <div class="card-body graph-container">
+                              {{  div3 | safe  }}
+                              {{  script3 | safe  }}
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div> <!-- card -->
+        </div>
+        <!-- end of graph -->
+        </div> <!-- end right side -->
+        <div class="col-md-12">
+            <div class="card-body">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Results</h6>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>Competition</th>
+                          <th>Ranking</th>
+                          <th>Bench Press</th>
+                          <th>Squat</th>
+                          <th>Deadlift</th>
+                          <th>Combined</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for competition in competition_results %}
+                        <tr>
+                            <td>{{ competition['competition'] }}</td>
+                            <td>{{ competition['ranking'] }}</td>
+                            <td>{{ competition['bench press'] }}</td>
+                            <td>{{ competition['squat'] }}</td>
+                            <td>{{ competition['deadlift'] }}</td>
+                            <td>{{ competition['total'] }}</td>
+                        </tr>
+                        {% endfor %}
+                     </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- card -->
+          </div> <!--end 1st table-->
+          <div class='col-md-12 radar-graph-heading'>
+            <h1> Athlete Comparison </h1>
+          </div>
+          <div class='col-md-12' id='radar-graph-container'>
+            <img id='radar-graph' src="{{ url_for('static', filename='img/athlete_power_lifting_relative_personal_best.png')}}">
+          </div>
+    </div> <!-- sport category card -->
+  </div>
+</div> <!-- end of card body -->

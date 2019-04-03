@@ -1,0 +1,51 @@
+{
+	"id": "340577",
+	"name": ["Sharon", "", "Smith"],
+	"gender": "F",
+	"DOB": "1995-11-09",
+	"province": "Ontario",
+	"language": "English",
+	"sport": "Power Lifting",
+	"competitions": {
+					"Competition 1": {"date": "2017-06-01", "rank": 1},
+					"Competition 2": {"date": "2017-06-10", "rank": 2},
+					"Competition 3": {"date": "2017-07-01", "rank": 3},
+					"Competition 4": {"date": "2017-07-10", "rank": 4},
+					"Competition 5": {"date": "2017-08-01", "rank": 5},
+					"Competition 6": {"date": "2017-08-10", "rank": 6}
+					},	
+	"results": {
+		"bench press":
+			{
+			"Competition 1": {"score": 61.0, "average": 62.2},
+			"Competition 2": {"score": 64.8, "average": 58.1},
+			"Competition 3": {"score": 58.3, "average": 52.5},
+			"Competition 4": {"score": 56.8, "average": 57.3},
+			"Competition 5": {"score": 55.9, "average": 78.0},
+			"Competition 6": {"score": 62.6, "average": 54.1}
+			},
+		"deadlift":
+			{
+			"Competition 1": {"score": 99.2, "average": 71.3},
+			"Competition 2": {"score": 65.4, "average": 92.3},
+			"Competition 3": {"score": 87.8, "average": 64.8},
+			"Competition 4": {"score": 63.6, "average": 62.0},
+			"Competition 5": {"score": 57.5, "average": 54.7},
+			"Competition 6": {"score": 86.0, "average": 92.1}
+			},
+		"squat":
+			{
+			"Competition 1": {"score": 94.7, "average": 64.4},
+			"Competition 2": {"score": 54.0, "average": 88.4},
+			"Competition 3": {"score": 92.8, "average": 80.7}, 
+			"Competition 4": {"score": 93.0, "average": 82.2},
+			"Competition 5": {"score": 67.9, "average": 71.1},
+			"Competition 6": {"score": 87.6, "average": 91.1}
+			}
+		},
+	"personal best": {
+		"bench press": {"division": "F2", "record": 64.8, "division average": 78.0},
+		"deadlift": {"division" : "F2" , "record": 99.2, "division average": 92.3},
+		"squat": {"division": "F2", "record": 94.7, "division average": 91.1}
+		}
+}

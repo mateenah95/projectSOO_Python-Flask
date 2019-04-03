@@ -1,0 +1,75 @@
+.pr-outer-ring {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background: orange;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.pr-inner-ring {
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+  background: blue;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pr-text-container {
+
+}
+
+.results-table {
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+.sports-block-body {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.sport-block {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pr-info {
+  text-align: center;
+  color: white;
+}
+
+
+.comp-info {
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comp-info-header {
+  height: 20%;
+}
+.comp-info-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+.comp-info-footer {
+  height: 20%;
+}
+
+.comp-info {
+  font-size: 5rem;
+
+}

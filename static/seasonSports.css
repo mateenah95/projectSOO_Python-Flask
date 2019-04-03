@@ -1,0 +1,13 @@
+#main-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:SteelBlue;
+  color:white;
+  padding:18px;
+  text-align: center;
+}
+
+.aligner{
+  text-align: center;
+}

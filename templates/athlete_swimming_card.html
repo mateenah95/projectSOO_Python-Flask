@@ -1,0 +1,71 @@
+{% block sport_specific_stylesheet %}
+    <link href="{{ url_for('static', filename='css/player-swimming.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% for swim_event in events_progress %}
+<div class="col-md-12 sport-block"> <!-- start of sports block -->
+  <div class="card-body">
+    <div class="card shadow mb-4"> <!-- start of sports block content -->
+      <div class="card-header py-3 sport-heading bg-danger">
+            <h3 class="m-0 font-weight-bold text-white">{{ swim_event['title'] }}</h3>
+        </div>
+      <div class="card-body sports-block-body row"> <!-- start of sports category card -->
+        <div class="col-md-3 pr-info bg-secondary">
+          <div class="card-body"> <!-- pr box -->
+            <h3> Personal Best </h3>
+            <div class="pr-outer-ring">
+              <div class="pr-inner-ring">
+                <div class="pr-text-container">
+                  <h1> {{ swim_event['record'] }} </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 comp-info bg-success">
+          <div class="card-body">
+          <div class="comp-info-header">
+            <h3> Faster than </h3>
+          </div>
+          <div class="comp-info-body">
+            <h1 class="comp-info"> {{ swim_event['percentile'] }}% </h1>
+          </div>
+          <div class="comp-info-footer">
+            <h3> of the competition </h3>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-6 results-table">
+            <div class="card shadow">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Results</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Competition</th>
+                        <th>Final Time</th>
+                        <th>Ranking</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for event in swim_event['results table'] %}
+                      <tr>
+                        <td>{{ event['title'] }}</td>
+                        <td>{{ event['time'] }}</td>
+                        <td>{{ event['rank'] }}</td>
+                      </tr>
+                      {% endfor %}
+                   </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div> <!-- sport category card -->
+    </div> <!-- end of sports block content -->
+  </div> <!-- end of card body -->
+</div> <!-- end of sports block -->
+{% endfor %}

@@ -1,0 +1,51 @@
+{
+	"id": "503943",
+	"name": ["Paula", "", "Parker"],
+	"gender": "F",
+	"DOB": "1996-01-24",
+	"province": "Toronto",
+	"language": "English",
+	"sport": "Swimming",
+	"competitions": {
+					"Competition 1": {"date": "2017-06-01", "rank": 1},
+					"Competition 2": {"date": "2017-06-10", "rank": 2},
+					"Competition 3": {"date": "2017-07-01", "rank": 3},
+					"Competition 4": {"date": "2017-07-10", "rank": 4},
+					"Competition 5": {"date": "2017-08-01", "rank": 5},
+					"Competition 6": {"date": "2017-08-10", "rank": 6}
+					},
+	"results": {
+		"100 M Backstroke":
+			{
+			"Competition 1": {"score": 109.6, "average": 120.1, "rank": 1},
+			"Competition 2": {"score": 107.8, "average": 118.0, "rank": 2},
+			"Competition 3": {"score": 108.4, "average": 115.2, "rank": 3},
+			"Competition 4": {"score": 112.7, "average": 113.0, "rank": 4},
+			"Competition 5": {"score": 118.6, "average": 114.4, "rank": 5},
+			"Competition 6": {"score": 142.3, "average": 116.8, "rank": 6}
+			},
+		"100 M Breaststroke":
+			{
+			"Competition 1": {"score": 116.6, "average": 140.2, "rank": 1},
+			"Competition 2": {"score": 130.7, "average": 138.7, "rank": 2},
+			"Competition 3": {"score": 100.7, "average": 130.6, "rank": 3},
+			"Competition 4": {"score": 147.8, "average": 123.5, "rank": 4},
+			"Competition 5": {"score": 118.2, "average": 121.1, "rank": 5},
+			"Competition 6": {"score": 109.1, "average": 119.9, "rank": 6}
+			},
+		"100 M Butterfly":
+			{
+			"Competition 1": {"score": 101.0, "average": 110.3, "rank": 1},
+			"Competition 2": {"score": 123.6, "average": 108.7, "rank": 2},
+			"Competition 3": {"score": 100.8, "average": 115.4, "rank": 3}, 
+			"Competition 4": {"score": 110.6, "average": 110.2, "rank": 4},
+			"Competition 5": {"score": 127.4, "average": 113.6, "rank": 5},
+			"Competition 6": {"score": 142.9, "average": 117.9, "rank": 6}
+			}
+		},
+	"personal best": {
+		"100 M Backstroke": {"record": 107.8, "percentile": 60},
+		"100 M Breaststroke": {"record": 100.7, "percentile": 55},
+		"100 M Butterfly": {"record": 100.8, "percentile": 70}
+		}
+}

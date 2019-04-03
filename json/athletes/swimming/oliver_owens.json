@@ -1,0 +1,52 @@
+{
+	"id": "389816",
+	"name": ["Oliver", "", "Owens"],
+	"gender": "M",
+	"DOB": "1996-03-22",
+	"province": "Ontario",
+	"language": "English",
+	"weight": 75,
+	"sport": "Swimming",
+	"competitions": {
+					"Competition 1": {"date": "2017-06-01", "rank": 1},
+					"Competition 2": {"date": "2017-06-10", "rank": 2},
+					"Competition 3": {"date": "2017-07-01", "rank": 3},
+					"Competition 4": {"date": "2017-07-10", "rank": 4},
+					"Competition 5": {"date": "2017-08-01", "rank": 5},
+					"Competition 6": {"date": "2017-08-10", "rank": 6}
+					},
+	"results": {
+		"200 M Backstroke":
+			{
+			"Competition 1": {"score": 100.8, "average": 122.3, "rank": 1},
+			"Competition 2": {"score": 112.7, "average": 91.4, "rank": 2},
+			"Competition 3": {"score": 97.4, "average": 131.8, "rank": 3},
+			"Competition 4": {"score": 134.7, "average": 114.7, "rank": 4},
+			"Competition 5": {"score": 103.7, "average": 139.8, "rank": 5},
+			"Competition 6": {"score": 120.6, "average": 95.6, "rank": 6}
+			},
+		"200 M Breaststroke":
+			{
+			"Competition 1": {"score": 103.9, "average": 137.7, "rank": 1},
+			"Competition 2": {"score": 109.2, "average": 101.3, "rank": 2},
+			"Competition 3": {"score": 99.7, "average": 95.2, "rank": 3},
+			"Competition 4": {"score": 137.0, "average": 119.9, "rank": 4},
+			"Competition 5": {"score": 99.5, "average": 101.0, "rank": 5},
+			"Competition 6": {"score": 129.9, "average": 109.6, "rank": 6}
+			},
+		"200 M Butterfly":
+			{
+			"Competition 1": {"score": 117.7, "average": 123.6, "rank": 1},
+			"Competition 2": {"score": 106.7, "average": 129.1, "rank": 2},
+			"Competition 3": {"score": 100.2, "average": 103.6, "rank": 3}, 
+			"Competition 4": {"score": 131.0, "average": 109.4, "rank": 4},
+			"Competition 5": {"score": 91.4, "average": 111.4, "rank": 5},
+			"Competition 6": {"score": 137.9, "average": 107.3, "rank": 6}
+			}
+		},
+	"personal best": {
+		"200 M Backstroke": {"record": 97.4, "percentile": 80},
+		"200 M Breaststroke": {"record": 99.5, "percentile": 75},
+		"200 M Butterfly": {"record": 91.4, "percentile": 85}
+		}
+}

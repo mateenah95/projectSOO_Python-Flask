@@ -1,0 +1,51 @@
+{
+	"id": "911496",
+	"name": ["Russell", "", "Reed"],
+	"gender": "M",
+	"DOB": "1997-12-22",
+	"province": "Ontario",
+	"language": "English",
+	"sport": "Power Lifting",
+	"competitions": {
+					"Competition 1": {"date": "2017-06-01", "rank": 1},
+					"Competition 2": {"date": "2017-06-10", "rank": 2},
+					"Competition 3": {"date": "2017-07-01", "rank": 3},
+					"Competition 4": {"date": "2017-07-10", "rank": 4},
+					"Competition 5": {"date": "2017-08-01", "rank": 5},
+					"Competition 6": {"date": "2017-08-10", "rank": 6}
+					},		
+	"results": {
+		"bench press":
+			{
+			"Competition 1": {"score": 94.0, "average": 104.3},
+			"Competition 2": {"score": 99.8, "average": 94.4},
+			"Competition 3": {"score": 91.4, "average": 98.2},
+			"Competition 4": {"score": 93.3, "average": 67.0},
+			"Competition 5": {"score": 92.7, "average": 103.5},
+			"Competition 6": {"score": 90.9, "average": 106.5}
+			},
+		"deadlift":
+			{
+			"Competition 1": {"score": 88.3, "average": 88.2},
+			"Competition 2": {"score": 69.2, "average": 66.7},
+			"Competition 3": {"score": 68.6, "average": 61.3},
+			"Competition 4": {"score": 89.0, "average": 78.1},
+			"Competition 5": {"score": 75.9, "average": 67.3},
+			"Competition 6": {"score": 86.6, "average": 62.1}
+			},
+		"squat":
+			{
+			"Competition 1": {"score": 105.3, "average": 100.0},
+			"Competition 2": {"score": 108.8, "average": 82.2},
+			"Competition 3": {"score": 108.1, "average": 105.5}, 
+			"Competition 4": {"score": 104.4, "average": 67.5},
+			"Competition 5": {"score": 104.0, "average": 98.4},
+			"Competition 6": {"score": 103.8, "average": 71.6}
+			}
+		},
+	"personal best": {
+		"bench press": {"division": "M2", "record": 99.8, "division average": 98.2},
+		"deadlift": {"division" : "M2" , "record": 88.3, "division average": 66.7},
+		"squat": {"division": "M2", "record": 108.8, "division average": 82.2}
+		}
+}

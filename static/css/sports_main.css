@@ -1,0 +1,30 @@
+.sport-container {
+  margin: 40px;
+}
+
+.card-body {
+  background-color: gray;
+  height: 200px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.sports-content-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.sport-logo {
+  height: 150px;
+  /* background-color: #009fff; */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
+}
+
+.sport-header {
+  text-align: left;
+  margin-bottom: 20px;
+}

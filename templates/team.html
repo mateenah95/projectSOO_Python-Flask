@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+  <!--Main Stylesheet Link-->
+  <link href="{{ url_for('static', filename='css/player.css') }}" rel="stylesheet" type="text/css">
+  <!--Main Stylesheet & Javascript Links-->
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css" />
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<!--Image and Medals Row-->
+<div class="container-fluid">
+  <div style="text-align: center;"><h1 class='display-4'><em>{{team_name}}</em></h1></div>
+  <div class="row">
+    <div class="col-md-5 player-header">
+      <div id="profile-img-container">
+        <img class="img-fluid rounded-circle img-thumbnail" id="profile-img" src="{{ url_for('static', filename='img/person-placeholder.jpg') }}">
+      </div></div>
+
+    <div class="col-md-7 player-awards ">
+      <div class="medals-container">
+        <div class="coin bronze"><p></p></div>
+        <div class="coin silver"><p></p></div>
+        <div class="coin gold"><p></p></div>
+      </div></div>
+  </div>
+
+  <!--Info Row #1-->
+  <div class="card shadow mb-4">
+    <div class="card-body row">
+      <!--Column 1-->
+      <div class="col-md-4 aligner">
+        <h2>Captin</h2>
+        <h3><em>captin_name</em></h3>
+      </div>
+      <!--Column 2-->
+      <div class="col-md-4 aligner">
+        <h2>Coach</h2>
+        <h3><em>coach_name</em></h3>
+      </div>
+      <!--Column 3-->
+      <div class="col-md-4 aligner">
+        <h2>Manager</h2>
+        <h3><em>manager_name</em></h3>
+      </div>
+    </div>
+  </div>
+
+  <!--Info Row #2-->
+  <div class="card shadow mb-4">
+    <div class="card-body row">
+      <!--Column 1-->
+      <div class="col-md-3 aligner">
+        <h2>Games Played</h2>
+        <h3><em>Num. Games</em></h3>
+      </div>
+      <!--Column 2-->
+      <div class="col-md-3 aligner">
+        <h2>Games Won</h2>
+        <h3><em>Num. Games</em></h3>
+      </div>
+      <!--Column 3-->
+      <div class="col-md-3 aligner">
+        <h2>Games Lost</h2>
+        <h3><em>Num. Games</em></h3>
+      </div>
+      <!--Column 4-->
+      <div class="col-md-3 aligner">
+        <h2>Games Drawn</h2>
+        <h3><em>Num. Games</em></h3>
+      </div>
+    </div>
+  </div>
+
+  <!--Info Row #3-->
+  <div class="card shadow mb-4">
+    <div class="card-body row">
+      <!--Column 1-->
+      <div class="col-md-4 aligner">
+        <h2>Total Fowls</h2>
+        <h3><em>Num. Fowls</em></h3>
+      </div>
+      <!--Column 2-->
+      <div class="col-md-4 aligner">
+        <h2>Yellow Cards</h2>
+        <h3><em>Num. Yellow</em></h3>
+      </div>
+      <!--Column 3-->
+      <div class="col-md-4 aligner">
+        <h2>Red Cards</h2>
+        <h3><em>Num. Red</em></h3>
+      </div>
+    </div>
+  </div>
+
+  <!--Roster Row-->
+  <div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#swimmingCard1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="swimmingCard1">
+      <h6 class="m-0 font-weight-bold text-primary">Team Roster</h6>
+    </a>
+
+    <div class="collapse show col-md-9" id="swimmingCard1">
+      <div class="card-body col-md-9">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Player 1 Name</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Player 2 Name</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Player 3 Name</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Player 4 Name</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Player 5 Name</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Player 6 Name</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Player 7 Name</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Player 8 Name</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Player 9 Name</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Player 10 Name</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div></div>
+</div>
+{% endblock %}

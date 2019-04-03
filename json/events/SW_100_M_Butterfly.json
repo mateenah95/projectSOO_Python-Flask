@@ -1,0 +1,22 @@
+{
+    "name": "SW 100 M Butterfly",
+    "ID": "20003",
+    "divisons": ["F1", "F2", "F3", "M1", "M2", "M3"],
+    "DivAveScores": ["00:01:43.600", "00:02:01.200", "00:02:35.300", "00:01:26.200", "00:01:32.300", "00:02:15.900"],
+    "ageRange": [5, 50],
+    "ability": 8,
+    "rulesModifications": 0,
+    "topThree": [
+                    {"score": "50.39", "athlete": "Joseph SCHOOLING"},
+                    {"score": "51.14", "athlete": "Chad LE CLOS"},
+                    {"score": "51.14", "athlete": "Laszlo CSEH"}
+                ],
+    "results": [
+                   {"date": "2017-06-01", "top": 130.9, "average": 110.3},
+                   {"date": "2017-06-10", "top": 125.8, "average": 108.7},
+                   {"date": "2017-07-01", "top": 110.1, "average": 115.4},
+                   {"date": "2017-07-10", "top": 109.9, "average": 110.2},
+                   {"date": "2017-08-01", "top": 120.2, "average": 113.6},
+                   {"date": "2017-08-10", "top": 105.9, "average": 117.9}
+               ]
+}

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+<link href="{{ url_for('static', filename='css/sport.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css"/>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Title -->
+  <div style="text-align: center;">
+    <h1 class='display-4'>{{ title }}</h1>
+  </div>
+
+  <!-- Banner -->
+  <div class="card mb-4">
+    <img id="bannerPic" src="{{ banner_image }}">
+  </div>
+
+  <!-- Athlete -->
+  <div class="card mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">Top Medalists</h6>
+    </div>
+    <div class="row row-style">
+      <div class="col-lg-2 col-style">
+        <div>
+          <a class="nav-link collapsed" href="{{ athlete1_link }}">
+            <h6 class="m-0 font-weight-bold text-primary">{{ athlete1_name }}</h6>
+            <img id="athletePic" src="{{ athlete1_image }}">
+          </a>
+          <div class="medals-container">
+            <div class="medal gold">{{ athlete1_gold }}</div>
+            <div class="medal silver">{{ athlete1_silver }}</div>
+            <div class="medal bronze">{{ athlete1_bronze }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-style">
+        <div>
+          <a class="nav-link collapsed" href="{{ athlete2_link }}">
+            <h6 class="m-0 font-weight-bold text-primary">{{ athlete2_name }}</h6>
+            <img id="athletePic" src="{{ athlete2_image }}">
+          </a>
+          <div class="medals-container">
+            <div class="medal gold">{{ athlete2_gold }}</div>
+            <div class="medal silver">{{ athlete2_silver }}</div>
+            <div class="medal bronze">{{ athlete2_bronze }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-style">
+        <div>
+          <a class="nav-link collapsed" href="{{ athlete3_link }}">
+            <h6 class="m-0 font-weight-bold text-primary">{{ athlete3_name }}</h6>
+            <img id="athletePic" src="{{ athlete3_image }}">
+          </a>
+          <div class="medals-container">
+            <div class="medal gold">{{ athlete3_gold }}</div>
+            <div class="medal silver">{{ athlete3_silver }}</div>
+            <div class="medal bronze">{{ athlete3_bronze }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-style">
+        <div>
+          <a class="nav-link collapsed" href="{{ athlete4_link }}">
+            <h6 class="m-0 font-weight-bold text-primary">{{ athlete4_name }}</h6>
+            <img id="athletePic" src="{{ athlete4_image }}">
+          </a>
+          <div class="medals-container">
+            <div class="medal gold">{{ athlete4_gold }}</div>
+            <div class="medal silver">{{ athlete4_silver }}</div>
+            <div class="medal bronze">{{ athlete4_bronze }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-style">
+        <div>
+          <a class="nav-link collapsed" href="{{ athlete5_link }}">
+            <h6 class="m-0 font-weight-bold text-primary">{{ athlete5_name }} </h6>
+            <img id="athletePic" src="{{ athlete5_image }}">
+          </a>
+          <div class="medals-container">
+            <div class="medal gold">{{ athlete5_gold }}</div>
+            <div class="medal silver">{{ athlete5_silver }}</div>
+            <div class="medal bronze">{{ athlete5_bronze }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Graph -->
+  <div class="card mb-4">
+    <div class="row row-style">
+      <div class="col-lg-5 col-style">
+        <div class="graph-container">
+          {{ div1 | safe }}
+          {{ script1 | safe }}
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-style">
+        <div class="graph-container">
+          {{ div2 | safe }}
+          {{ script2 | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- End of Main Content -->
+{% endblock %}

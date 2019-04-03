@@ -1,0 +1,30 @@
+{
+  "name": "Toronto",
+  "teamID": 10023,
+  "teamIcon": "",
+  "province": "Ontario",
+  "sport": "soccer",
+  "played": 67,
+  "won": 38,
+  "lost": 16,
+  "drawn": 13,
+  "goalsScored": 101,
+  "goalsConceded": 27,
+  "totalShots": 123,
+  "shotsOnTarget": 32,
+  "totalSaves": 28,
+  "cleanSheets": 14,
+  "totalFowls": 19,
+  "yellowCards": 7,
+  "redCards": 2,
+  "coach": "John Doe",
+  "roster": [
+    ["Milan Borjan", 12, 0, "GoalKeeper"],["Zachary Brault-Guillard", 8, 4, "Defender"],
+    ["Alessandro Busti", 6, 7, "Defender"],["Marco Bustos", 11, 9, "Defender"],
+    ["Lucas Cavallini", 23, 4, "Defender"],["Jay Chapman", 12, 3, "Midfielder"],
+    ["Juan Córdova", 17, 2, "Midfielder"],["Derek Cornelius", 10, 10, "midfielder"],
+    ["Maxime Crépeau", 15, 3, "Midfielder"],["Jonathan David", 2, 6, "Striker"],
+    ["Alphonso Davies", 4, 5, "Striker"]
+  ]
+
+}

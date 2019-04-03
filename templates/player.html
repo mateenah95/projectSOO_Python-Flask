@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='css/player.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css" />
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+{% endblock %}
+
+{% block sport_specific_stylesheet %}
+{% endblock %}
+
+{% block content %}
+
+    <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- <div style="text-align: center;"><h1 class='display-4'>Athlete</h1></div> -->
+          <div class="row">
+            <div class="col-md-5 player-header">
+              <div id="profile-img-container">
+                <h1> {{ name }} </h1>
+                <img class="img-fluid rounded-circle img-thumbnail" id="profile-img" src="{{ athlete_image }}">
+              </div>
+            </div>
+
+            <div class="col-md-7 player-awards ">
+                <div class="medals-container">
+                  <div class="coin gold"><p>1</p></div>
+                  <div class="coin silver"><p>3</p></div>
+                  <div class="coin bronze"><p>3</p></div>
+                </div>
+            </div>
+
+            <div class="col-md-12 ">
+                <div class="card shadow mb-4 bg-secondary">
+                  <div class="card-body row">
+                    <!--Column 1-->
+                    <div class="col-md-4 aligner text-white">
+                      <h2>Sport</h2>
+                      <h3 id="#sportType">{{ sport }}</h3>
+                    </div>
+                    <!--Column 2-->
+                    <div class="col-md-4 aligner text-white">
+                      <h2>Province</h2>
+                      <h3>{{ province }}</h3>
+                    </div>
+                    <!--Column 3-->
+                    <div class="col-md-4 aligner text-white">
+                      <h2>Age</h2>
+                      <h3>{{ age }}</h3>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-md-12 sport-block-container"> <!-- start of sports block -->
+                {% if sport == 'Power Lifting' %}
+                  {% include 'athlete_powerlifting_card.html' %}
+                {% elif sport == 'Swimming' %}
+                  {% include 'athlete_swimming_card.html' %}
+                {% else %}
+                  {% include 'athlete_swimming_card.html' %}
+                {% endif %}
+              </div> <!-- end of sports block -->
+            </div> <!-- end of row -->
+          </div> <!-- end of container -->
+        <!-- End of Main Content -->
+
+
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/player.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,51 @@
+{
+	"id": "497519",
+	"name": ["Tess", "", "Trojan" ],
+	"gender": "F",
+	"DOB": "1996-04-15",
+	"province": "Ontario",
+	"language": "English",
+	"sport": "Power Lifting",
+	"competitions": {
+					"Competition 1": {"date": "2017-06-01", "rank": 1},
+					"Competition 2": {"date": "2017-06-10", "rank": 2},
+					"Competition 3": {"date": "2017-07-01", "rank": 3},
+					"Competition 4": {"date": "2017-07-10", "rank": 4},
+					"Competition 5": {"date": "2017-08-01", "rank": 5},
+					"Competition 6": {"date": "2017-08-10", "rank": 6}
+					},
+	"results": {
+		"bench press":
+			{
+			"Competition 1": {"score": 53.8, "average": 62.2},
+			"Competition 2": {"score": 57.7, "average": 58.1},
+			"Competition 3": {"score": 66.5, "average": 52.5},
+			"Competition 4": {"score": 79.3, "average": 57.3},
+			"Competition 5": {"score": 83.9, "average": 78.0},
+			"Competition 6": {"score": 52.7, "average": 54.1}
+			},
+		"deadlift":
+			{
+			"Competition 1": {"score": 94.6, "average": 71.3},
+			"Competition 2": {"score": 72.1, "average": 92.3},
+			"Competition 3": {"score": 87.0, "average": 64.8},
+			"Competition 4": {"score": 80.2, "average": 62.0},
+			"Competition 5": {"score": 91.6, "average": 54.7},
+			"Competition 6": {"score": 79.2, "average": 92.1}
+			},
+		"squat":
+			{
+			"Competition 1": {"score": 75.8, "average": 64.4},
+			"Competition 2": {"score": 53.7, "average": 88.4},
+			"Competition 3": {"score": 77.5, "average": 80.7}, 
+			"Competition 4": {"score": 54.3, "average": 82.2},
+			"Competition 5": {"score": 89.3, "average": 71.1},
+			"Competition 6": {"score": 62.6, "average": 91.1}
+			}
+		},
+	"personal best": {
+		"bench press": {"division": "F2", "record": 83.9, "division average": 78.0},
+		"deadlift": {"division" : "F2" , "record": 94.6, "division average": 92.3},
+		"squat": {"division": "F2", "record": 89.3, "division average": 91.1}
+		}
+}

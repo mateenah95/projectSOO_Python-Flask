@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='css/search_page.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.css" type="text/css" />
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.4.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class='container-fluid search-content-wrapper'> <!-- start page content -->
+  <div><h1 class='display-5'>Find an Athlete or Team</h1></div>
+  <div class='card shadow mb-4' id='search-box-container'>
+    <div class='card-body'>
+      <form>
+        <div class="form-group">
+          <div>
+            <label class="radio-inline"><input type="radio" id="player-opt" name="optradio" checked>Player</label>
+            <label class="radio-inline"><input type="radio" id="team-opt" name="optradio">Team</label>
+          </div>
+          <label for="searchName"><strong>Name</strong></label>
+          <input type="text" class="form-control" id="name-input-box">
+          <!-- <label for="searchDelegation"><strong>Delegation</strong></label> -->
+          <!-- <div class="dropdown" id="delegation-dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id='selectionBtn'>Select A Delegation
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li>Alberta</li>
+                <li>British Columbia</li>
+                <li>Manitoba</li>
+              </ul>
+            </div> -->
+          </div>
+          <div class='btn btn-primary' id='searchBtn'>Search</div>
+      </form>
+    </div>
+  </div> <!-- search box container -->
+</div> <!-- end page content -->
+  <div class='row' id='search-results-container'>
+  </div>
+
+{% endblock %}
+{% block script %}
+<script src="{{ url_for('static', filename='js/search_page.js') }}"></script>
+{% endblock %}
